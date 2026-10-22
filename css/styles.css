@@ -174,6 +174,24 @@ button { font: inherit; }
   color: var(--muted);
 }
 
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-left: 8px;
+  border-left: 1px solid var(--line);
+}
+.icon-link {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: var(--ink);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.icon-link svg { width: 15px; height: 15px; }
+.icon-link:hover { background: var(--ink); color: var(--paper); }
+
 .index-btn {
   display: inline-flex;
   align-items: center;
@@ -370,6 +388,26 @@ button { font: inherit; }
   text-transform: uppercase;
   color: var(--muted);
 }
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 20px;
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+}
+.hero-links a {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 3px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.hero-links a span { color: var(--red-deep); margin-left: 2px; }
+.hero-links a:hover { color: var(--red-deep); border-color: var(--red-deep); }
 
 .signal { border-top: 1px solid var(--line); }
 .signal-row {
@@ -698,6 +736,48 @@ button { font: inherit; }
   color: var(--muted);
 }
 
+/* ---------- Contact band ---------- */
+.contact-band { border-top: 1px solid var(--ink); padding: 42px 0; }
+.contact-band-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 56px;
+  align-items: end;
+}
+.contact-band-copy .tag { margin-bottom: 6px; }
+.contact-band-copy p { font-size: 14px; line-height: 1.5; color: var(--ink-2); max-width: 42ch; }
+.contact-band-links { text-align: right; }
+.contact-band-mail {
+  display: inline-block;
+  font-size: clamp(20px, 2.6vw, 34px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.contact-band-mail .mail-domain { color: var(--muted); }
+.contact-band-mail:hover { color: var(--red-deep); border-color: var(--red-deep); }
+.contact-band-mail:hover .mail-domain { color: var(--red-deep); }
+.contact-band-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 22px;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.contact-band-social a {
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.contact-band-social a:hover { color: var(--red-deep); border-color: var(--red-deep); }
+
 /* ---------- Colophon ---------- */
 .colophon {
   background: var(--ink);
@@ -735,6 +815,9 @@ button { font: inherit; }
   .spec-row { grid-template-columns: 1fr; gap: 5px; padding: 15px 0; }
   .spec-key { padding-top: 0; }
   .edu { grid-template-columns: 1fr; gap: 22px; }
+  .contact-band-inner { grid-template-columns: 1fr; align-items: start; }
+  .contact-band-links { text-align: left; }
+  .contact-band-social { justify-content: flex-start; }
   .colophon-grid { grid-template-columns: 1fr; }
   .colophon-grid p:last-child { text-align: left; }
 }
@@ -745,6 +828,8 @@ button { font: inherit; }
   .hero { padding-top: calc(var(--bar) + 58px); }
   .hero-grid { grid-template-columns: 1fr; }
   .vert { display: none; }
+  .topbar-social { padding-left: 6px; }
+  .icon-link { width: 28px; height: 28px; }
   .name { font-size: clamp(40px, 14.4vw, 120px); letter-spacing: -0.05em; }
   .name .serif { font-size: 0.96em; }
   .signal-row { grid-template-columns: 8px 66px minmax(0, 1fr); gap: 10px; }
@@ -762,6 +847,8 @@ button { font: inherit; }
   .tape-track span { padding: 10px 14px; font-size: 9px; }
   .index-list a { font-size: clamp(30px, 10.5vw, 48px); }
   .index-foot { font-size: 9px; }
+  .contact-band-mail { font-size: clamp(18px, 5.8vw, 28px); }
+  .contact-band-mail .mail-domain { display: block; }
   .work-row { grid-template-columns: 24px minmax(0, 1fr) 20px; }
   .work-main h3 { font-size: 22px; }
   .work-stats { gap: 8px 18px; }
