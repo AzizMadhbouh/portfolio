@@ -4,342 +4,337 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Aziz Madhbouh — Data Engineering · Big Data · AI/ML</title>
-  <meta name="description" content="Portfolio of Mohamed Aziz Madhbouh — Big Data & Data Analysis student at ISAMM, building distributed data pipelines and machine-learning systems with Spark, Hadoop, Python and NLP." />
-  <meta name="theme-color" content="#0b0f17" />
+  <meta name="description" content="Portfolio of Mohamed Aziz Madhbouh — final-year Big Data & Data Analysis student at ISAMM, building distributed data pipelines and applied ML systems." />
+  <meta name="theme-color" content="#ECE7DC" />
   <meta property="og:title" content="Mohamed Aziz Madhbouh — Data Engineering · Big Data · AI/ML" />
-  <meta property="og:description" content="Data pipelines, Big Data systems and applied ML. Python · Spark · Hadoop · SQL · PyTorch." />
+  <meta property="og:description" content="Pipelines, distributed processing and applied ML. Python · Spark · Hadoop · SQL · PyTorch." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0f17'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='%235eead4' text-anchor='middle'%3EMA%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2314120F'/%3E%3Ctext x='50' y='74' font-size='66' font-family='Arial' font-weight='bold' fill='%23ECE7DC' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
-  <!-- ===== Header / Nav ===== -->
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#home" class="brand" aria-label="Home">
-        <span class="brand-mark">MA</span>
-        <span class="brand-name">Mohamed Aziz Madhbouh</span>
+  <!-- ===== Top bar ===== -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+      <a class="mark" href="#top" aria-label="Mohamed Aziz Madhbouh — back to top">
+        <span class="mark-box">MAM</span>
+        <span class="mark-meta">Portfolio / Rev. 01</span>
       </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="navMenu" aria-label="Primary">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <!-- EDIT: point this to your CV PDF placed in assets/ -->
-        <a href="assets/resume.pdf" class="btn btn-sm btn-outline" download>Résumé</a>
-      </nav>
+      <div class="topbar-right">
+        <span class="status"><i aria-hidden="true"></i> Open to work</span>
+        <span class="clock" id="clock">TUNIS --:--</span>
+        <button class="index-btn" id="openIndex" aria-expanded="false" aria-controls="indexOverlay">
+          Index <span aria-hidden="true">↗</span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <!-- ===== Index overlay ===== -->
+  <div class="index-overlay" id="indexOverlay" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true" inert>
+    <div class="wrap overlay-inner">
+      <div class="index-head">
+        <span>Site index — 05 sections</span>
+        <button class="close-btn" id="closeIndex" aria-label="Close index">Close <span aria-hidden="true">✕</span></button>
+      </div>
+      <nav class="index-list" aria-label="Sections">
+        <a href="#profile"><span>01</span>Profile</a>
+        <a href="#capabilities"><span>02</span>Capabilities</a>
+        <a href="#work"><span>03</span>Selected work</a>
+        <a href="#education"><span>04</span>Education</a>
+        <a href="#contact"><span>05</span>Contact</a>
+      </nav>
+      <div class="index-foot">
+        <a href="mailto:mohamedazizmadhbouh0@gmail.com">mohamedazizmadhbouh0@gmail.com</a>
+        <a href="https://github.com/AzizMadhbouh" target="_blank" rel="noopener">GitHub ↗</a>
+        <span>Tunisia · GMT+1</span>
+      </div>
+    </div>
+  </div>
+
   <main id="main">
     <!-- ===== Hero ===== -->
-    <section class="hero" id="home">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <p class="eyebrow reveal">Data Engineering · Big Data · AI/ML</p>
-        <h1 class="reveal">Mohamed Aziz<br /><span class="grad-text">Madhbouh</span></h1>
-        <p class="hero-tagline reveal">
-          I build data pipelines and machine-learning systems that turn raw, messy data
-          into reliable, decision-ready information.
-        </p>
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-grid">
+          <p class="vert" aria-hidden="true">Data engineering — Big data — AI / ML</p>
 
-        <div class="hero-actions reveal">
-          <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="assets/resume.pdf" class="btn btn-ghost" download>Download CV</a>
-          <div class="social">
-            <a href="https://github.com/AzizMadhbouh" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/aziz-madhbouh-b3884b33b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="js-linkedin">
-              <!-- EDIT: replace the href above with your LinkedIn profile URL -->
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-            </a>
-            <a href="mailto:mohamedazizmadhbouh0@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>
-            </a>
+          <div class="hero-main">
+            <div class="hero-top">
+              <span>Portfolio / 2026</span>
+              <span>Tunisia → Remote / EU</span>
+            </div>
+
+            <h1 class="name" aria-label="Mohamed Aziz Madhbouh">
+              <span class="line"><span style="--d: .05s">Mohamed</span></span>
+              <span class="line"><span class="serif" style="--d: .16s">Aziz</span></span>
+              <span class="line"><span style="--d: .27s">Madhbouh<em aria-hidden="true">✳</em></span></span>
+            </h1>
+
+            <div class="hero-bottom">
+              <div class="hero-copy">
+                <p class="lede">I build pipelines and models for data that is too big, too messy, or too important to eyeball.</p>
+                <p class="hero-body">
+                  Final-year Big Data student in Tunis. I spend most of my time on the
+                  unglamorous half — ingestion, storage, tests, and the infrastructure that
+                  keeps a model honest.
+                </p>
+                <p class="scroll-cue">Scroll <span aria-hidden="true">↓</span></p>
+              </div>
+
+              <div class="signal" aria-label="Typical pipeline">
+                <div class="signal-row"><span class="sq" aria-hidden="true"></span><span class="k">Raw</span><span class="v">4.14M purchase rows</span></div>
+                <div class="signal-row"><span class="sq" aria-hidden="true"></span><span class="k">Ingest</span><span class="v">HDFS · YARN · Git LFS</span></div>
+                <div class="signal-row"><span class="sq" aria-hidden="true"></span><span class="k">Transform</span><span class="v">Spark · MapReduce</span></div>
+                <div class="signal-row"><span class="sq" aria-hidden="true"></span><span class="k">Model</span><span class="v">ModernBERT · scikit-learn</span></div>
+                <div class="signal-row"><span class="sq" aria-hidden="true"></span><span class="k">Ship</span><span class="v">PostgreSQL · Grafana</span></div>
+                <p class="signal-cap"><span>Fig. 01</span> Typical pipeline</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== About ===== -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-kicker">01 — About</span>
-          <h2>Data engineer in the making</h2>
+    <!-- ===== Ticker ===== -->
+    <div class="tape" aria-hidden="true">
+      <div class="tape-track">
+        <span>Python</span><b>✳</b><span>Spark</span><b>✳</b><span>Hadoop</span><b>✳</b><span>SQL</span><b>✳</b><span>PyTorch</span><b>✳</b><span>Docker</span><b>✳</b><span>PostgreSQL</span><b>✳</b><span>Grafana</span><b>✳</b><span>MapReduce</span><b>✳</b><span>pytest</span><b>✳</b>
+        <span>Python</span><b>✳</b><span>Spark</span><b>✳</b><span>Hadoop</span><b>✳</b><span>SQL</span><b>✳</b><span>PyTorch</span><b>✳</b><span>Docker</span><b>✳</b><span>PostgreSQL</span><b>✳</b><span>Grafana</span><b>✳</b><span>MapReduce</span><b>✳</b><span>pytest</span><b>✳</b>
+      </div>
+    </div>
+
+    <!-- ===== 01 Profile ===== -->
+    <section class="stage" id="profile">
+      <div class="wrap">
+        <div class="stage-head reveal">
+          <span class="folio">01</span>
+          <div>
+            <span class="tag">Ingest / Profile</span>
+            <h2>Unglamorous work,<br /><em>reliable results.</em></h2>
+          </div>
         </div>
 
-        <div class="about-grid">
-          <div class="about-text reveal">
+        <div class="profile-body">
+          <div class="profile-copy reveal">
+            <p class="lede">Most data work is janitorial. I've made peace with that — and gotten good at it.</p>
             <p>
-              I'm a final-stage <strong>Big Data &amp; Data Analysis</strong> student at
-              <strong>ISAMM</strong> (Tunisia), focused on building distributed data
-              pipelines and applied machine-learning systems.
+              I'm in my final year of a Big Data &amp; Data Analysis degree at ISAMM. My
+              projects usually start with a file nobody wants to open: 4.1 million purchase
+              rows, 110,000 appointment records, a pile of Jenkins logs.
             </p>
             <p>
-              My work sits where <em>correctness</em> meets <em>scale</em>: ingesting
-              noisy logs, processing multi-million-row datasets on Hadoop and Spark, and
-              training models that are measured honestly rather than assumed to work.
+              The interesting part is what comes after. That means distributed processing on
+              Spark and Hadoop, a database that can take the load, and a model whose limits I
+              can explain without a slide deck.
             </p>
             <p>
-              I care about engineering discipline too — tests, CI, linting, migrations and
-              reproducible Docker environments — not just notebooks that run once.
+              I care about the things that make a demo survive contact with a real system:
+              tests, migrations, reproducible containers, and logs that tell you what
+              actually broke.
             </p>
           </div>
 
-          <aside class="about-card reveal">
-            <h3>Looking for</h3>
-            <ul class="check-list">
-              <li>End-of-studies internship (PFE)</li>
-              <li>Entry-level Data Engineering / Big Data / AI-ML</li>
-              <li>On-site in Tunisia · Remote · EU relocation</li>
-            </ul>
-            <div class="about-meta">
-              <span class="dot"></span> Available for PFE — <strong>2027</strong>
-            </div>
+          <aside class="profile-aside reveal">
+            <dl>
+              <div><dt>Based</dt><dd>Manouba, Tunisia</dd></div>
+              <div><dt>Studying</dt><dd>Big Data &amp; Data Analysis, ISAMM</dd></div>
+              <div><dt>Graduating</dt><dd>2027</dd></div>
+              <div><dt>Open to</dt><dd>PFE · junior roles · remote</dd></div>
+              <div><dt>Languages</dt><dd>Arabic · French · English</dd></div>
+            </dl>
+            <p class="aside-note">// open to relocation: EU</p>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- ===== Skills ===== -->
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-kicker">02 — Skills</span>
-          <h2>Tools I build with</h2>
+    <!-- ===== 02 Capabilities ===== -->
+    <section class="stage" id="capabilities">
+      <div class="wrap">
+        <div class="stage-head reveal">
+          <span class="folio">02</span>
+          <div>
+            <span class="tag">Process / Capabilities</span>
+            <h2>Tools I've actually<br /><em>shipped with.</em></h2>
+          </div>
         </div>
 
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <h3>Languages &amp; Querying</h3>
-            <ul class="tags">
-              <li>Python</li><li>SQL</li><li>Java</li><li>Bash</li>
-            </ul>
+        <div class="spec reveal">
+          <div class="spec-row">
+            <span class="spec-key">Languages</span>
+            <span class="spec-val">Python · SQL · Java · Bash</span>
           </div>
-          <div class="skill-card reveal">
-            <h3>Big Data &amp; Processing</h3>
-            <ul class="tags">
-              <li>Apache Spark</li><li>PySpark</li><li>Hadoop HDFS</li>
-              <li>YARN</li><li>MapReduce</li><li>Hadoop Streaming</li>
-            </ul>
+          <div class="spec-row">
+            <span class="spec-key">Big data</span>
+            <span class="spec-val">Spark / PySpark · Hadoop HDFS · YARN · MapReduce · Hadoop Streaming</span>
           </div>
-          <div class="skill-card reveal">
-            <h3>Data &amp; Storage</h3>
-            <ul class="tags">
-              <li>PostgreSQL</li><li>Pandas</li><li>NumPy</li><li>Git LFS</li>
-            </ul>
+          <div class="spec-row">
+            <span class="spec-key">Storage</span>
+            <span class="spec-val">PostgreSQL · Pandas · NumPy · Git LFS</span>
           </div>
-          <div class="skill-card reveal">
-            <h3>ML / AI</h3>
-            <ul class="tags">
-              <li>scikit-learn</li><li>PyTorch</li><li>Transformers</li>
-              <li>ModernBERT</li><li>NLP</li><li>Model evaluation</li>
-            </ul>
+          <div class="spec-row">
+            <span class="spec-key">ML / AI</span>
+            <span class="spec-val">scikit-learn · PyTorch · Hugging Face Transformers · ModernBERT · model evaluation</span>
           </div>
-          <div class="skill-card reveal">
-            <h3>DevOps &amp; Tooling</h3>
-            <ul class="tags">
-              <li>Docker</li><li>Docker Compose</li><li>Git &amp; GitHub</li>
-              <li>Grafana</li><li>pytest</li><li>Jenkins</li><li>Linux</li>
-            </ul>
+          <div class="spec-row">
+            <span class="spec-key">Tooling</span>
+            <span class="spec-val">Docker · Docker Compose · Git · GitHub · Grafana · pytest · Jenkins · Linux</span>
+          </div>
+        </div>
+        <p class="spec-note reveal">// No percentage bars. These are tools I've used to ship something real.</p>
+      </div>
+    </section>
+
+    <!-- ===== 03 Selected work ===== -->
+    <section class="stage work" id="work">
+      <div class="wrap">
+        <div class="stage-head reveal">
+          <span class="folio">03</span>
+          <div>
+            <span class="tag">Output / Selected work</span>
+            <h2>Four systems,<br /><em>measured.</em></h2>
+          </div>
+          <span class="work-count">(04)</span>
+        </div>
+
+        <div class="work-list">
+          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/ci-logs-classifier" target="_blank" rel="noopener">
+            <span class="work-idx">01</span>
+            <div class="work-main">
+              <h3>CI Logs Classifier</h3>
+              <p>Jenkins build ingestion, failure classification with a fine-tuned ModernBERT model, severity scoring, PostgreSQL storage and Grafana dashboards.</p>
+              <div class="work-stats">
+                <span><b>0.77</b>macro-F1</span>
+                <span><b>14,320</b>eval samples</span>
+                <span><b>84</b>tests green</span>
+              </div>
+            </div>
+            <span class="work-go" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/ev-analytics-spark-hadoop" target="_blank" rel="noopener">
+            <span class="work-idx">02</span>
+            <div class="work-main">
+              <h3>EV Analytics</h3>
+              <p>Distributed analytics over 279,781 electric-vehicle registrations on a Dockerized HDFS + YARN + Spark cluster. Seven aggregations, computed in parallel.</p>
+              <div class="work-stats">
+                <span><b>279,781</b>rows</span>
+                <span><b>3</b>DataNodes</span>
+                <span><b>7</b>analyses</span>
+              </div>
+            </div>
+            <span class="work-go" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/mapreduce-purchases-analytics" target="_blank" rel="noopener">
+            <span class="work-idx">03</span>
+            <div class="work-main">
+              <h3>Purchases, Mapped &amp; Reduced</h3>
+              <p>Hadoop Streaming job that totals sales and transaction counts per product category across 4.14 million retail records.</p>
+              <div class="work-stats">
+                <span><b>4.14M</b>records</span>
+                <span><b>18</b>categories</span>
+                <span><b>201 MB</b>via Git LFS</span>
+              </div>
+            </div>
+            <span class="work-go" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/NoShowAnalysis" target="_blank" rel="noopener">
+            <span class="work-idx">04</span>
+            <div class="work-main">
+              <h3>No-Show Prediction</h3>
+              <p>Logistic regression against a class-balanced random forest for predicting missed medical appointments. Honest metrics for an imbalanced dataset.</p>
+              <div class="work-stats">
+                <span><b>110,527</b>records</span>
+                <span><b>28.5%</b>no-show rate</span>
+                <span><b>0.53</b>macro-F1</span>
+              </div>
+            </div>
+            <span class="work-go" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="work-extra reveal">
+          <span>Also</span>
+          <a href="https://github.com/AzizMadhbouh/Java_project-Final" target="_blank" rel="noopener">ClubApp — Java Swing / SQLite ↗</a>
+          <a href="https://github.com/AzizMadhbouh/Doctor_appointement" target="_blank" rel="noopener">Doctor Appointment API — Spring Boot / PostgreSQL ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 Education ===== -->
+    <section class="stage" id="education">
+      <div class="wrap">
+        <div class="stage-head reveal">
+          <span class="folio">04</span>
+          <div>
+            <span class="tag">Context / Education</span>
+            <h2>Where the theory<br /><em>comes from.</em></h2>
+          </div>
+        </div>
+
+        <div class="edu reveal">
+          <div class="edu-year">2027<span>expected</span></div>
+          <div class="edu-body">
+            <h3>Licence — Big Data &amp; Analyse de données</h3>
+            <p class="edu-place">Institut Supérieur des Arts Multimédia de la Manouba (ISAMM) · Tunisia</p>
+            <p>
+              Third year. Coursework leans on distributed systems, Big Data architecture,
+              data warehousing, machine learning and statistics — the theory behind the
+              projects above.
+            </p>
+            <p class="edu-course">Distributed systems / Big Data architecture / Machine learning / Data warehousing / Statistics</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Projects ===== -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-kicker">03 — Projects</span>
-          <h2>Things I've built</h2>
-          <p class="section-sub">Selected work — measured results, not claims.</p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="project-index">01</span>
-              <a class="project-link" href="https://github.com/AzizMadhbouh/ci-logs-classifier" target="_blank" rel="noopener" aria-label="Open project on GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </a>
-            </div>
-            <h3>CI Logs Classifier</h3>
-            <p>
-              End-to-end CI failure intelligence: ingests Jenkins builds, classifies
-              failures with a fine-tuned <strong>ModernBERT</strong> model, scores severity
-              (LLM + deterministic policy fallback), stores everything in PostgreSQL and
-              visualizes it in Grafana.
-            </p>
-            <ul class="project-metrics">
-              <li><strong>0.77</strong> macro-F1</li>
-              <li><strong>14,320</strong> eval logs</li>
-              <li><strong>84</strong> passed</li>
-            </ul>
-            <ul class="tags tags-sm">
-              <li>PyTorch</li><li>ModernBERT</li><li>PostgreSQL</li>
-              <li>Grafana</li><li>Docker</li><li>Jenkins</li>
-            </ul>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="project-index">02</span>
-              <a class="project-link" href="https://github.com/AzizMadhbouh/ev-analytics-spark-hadoop" target="_blank" rel="noopener" aria-label="Open project on GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </a>
-            </div>
-            <h3>EV Analytics — Spark &amp; Hadoop</h3>
-            <p>
-              Distributed analytics pipeline over electric-vehicle registration data on a
-              Dockerized <strong>HDFS + YARN + Spark</strong> cluster (1 NameNode,
-              3 DataNodes, 3 workers), computing seven aggregations with PySpark.
-            </p>
-            <ul class="project-metrics">
-              <li><strong>280k</strong> rows</li>
-              <li><strong>3</strong> DataNodes</li>
-              <li><strong>7</strong> analyses</li>
-            </ul>
-            <ul class="tags tags-sm">
-              <li>PySpark</li><li>Hadoop</li><li>HDFS</li><li>YARN</li><li>Docker Compose</li>
-            </ul>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="project-index">03</span>
-              <a class="project-link" href="https://github.com/AzizMadhbouh/mapreduce-purchases-analytics" target="_blank" rel="noopener" aria-label="Open project on GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </a>
-            </div>
-            <h3>MapReduce Purchases Analytics</h3>
-            <p>
-              MapReduce pipeline built on <strong>Hadoop Streaming</strong> that computes
-              total sales and transaction counts per product category across
-              <strong>4.1 million</strong> retail records, with a Dockerized HDFS cluster.
-            </p>
-            <ul class="project-metrics">
-              <li><strong>4.1M</strong> records</li>
-              <li><strong>18</strong> categories</li>
-              <li><strong>201 MB</strong> via LFS</li>
-            </ul>
-            <ul class="tags tags-sm">
-              <li>MapReduce</li><li>Hadoop Streaming</li><li>HDFS</li><li>Python</li>
-            </ul>
-          </article>
-
-          <!-- Project 4 -->
-          <article class="project reveal">
-            <div class="project-top">
-              <span class="project-index">04</span>
-              <a class="project-link" href="https://github.com/AzizMadhbouh/NoShowAnalysis" target="_blank" rel="noopener" aria-label="Open project on GitHub">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </a>
-            </div>
-            <h3>Medical No-Show Prediction</h3>
-            <p>
-              Healthcare analytics project predicting missed appointments. Compares a
-              logistic-regression baseline against a class-balanced random forest built on a
-              scikit-learn pipeline, with an honest read on class imbalance.
-            </p>
-            <ul class="project-metrics">
-              <li><strong>110k</strong> records</li>
-              <li><strong>28.5%</strong> no-show rate</li>
-              <li><strong>0.53</strong> macro-F1 (RF)</li>
-            </ul>
-            <ul class="tags tags-sm">
-              <li>scikit-learn</li><li>Pandas</li><li>Seaborn</li><li>Jupyter</li>
-            </ul>
-          </article>
-        </div>
-
-        <!-- Additional projects -->
-        <div class="more-projects reveal">
-          <h3>More projects</h3>
-          <div class="more-list">
-            <a href="https://github.com/AzizMadhbouh/Java_project-Final" target="_blank" rel="noopener">
-              <strong>ClubApp</strong>
-              <span>Java Swing + SQLite desktop app for club &amp; activity management</span>
-            </a>
-            <a href="https://github.com/AzizMadhbouh/Doctor_appointement" target="_blank" rel="noopener">
-              <strong>Doctor Appointment API</strong>
-              <span>Spring Boot + PostgreSQL REST API (JPA/Hibernate)</span>
-            </a>
+    <!-- ===== 05 Contact ===== -->
+    <section class="stage contact" id="contact">
+      <div class="wrap">
+        <div class="stage-head reveal">
+          <span class="folio">05</span>
+          <div>
+            <span class="tag">Handoff / Contact</span>
+            <h2>Send me the<br /><em>messy file.</em></h2>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ===== Education ===== -->
-    <section class="section section-alt" id="education">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-kicker">04 — Education</span>
-          <h2>Background</h2>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <span class="timeline-dot"></span>
-            <div class="timeline-body">
-              <span class="timeline-date">Expected 2027</span>
-              <h3>Licence — Big Data &amp; Analyse de données</h3>
-              <p class="timeline-place">Institut Supérieur des Arts Multimédia de la Manouba (ISAMM) · Tunisia</p>
-              <p class="timeline-desc">
-                Third-year student. Core coursework: distributed systems, Big Data
-                architecture, machine learning, data warehousing and statistical analysis.
-              </p>
-            </div>
+        <div class="contact-body reveal">
+          <p class="contact-note">// Open to PFE and junior roles — Tunisia, remote, or EU relocation.</p>
+          <a class="contact-mail" href="mailto:mohamedazizmadhbouh0@gmail.com">
+            <span class="mail-user">mohamedazizmadhbouh0</span><span class="mail-domain">@gmail.com</span>
+          </a>
+          <div class="contact-links">
+            <a href="https://github.com/AzizMadhbouh" target="_blank" rel="noopener">GitHub ↗</a>
+            <span>Manouba, Tunisia</span>
+            <span>GMT+1</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section class="section contact" id="contact">
-      <div class="container contact-inner reveal">
-        <span class="section-kicker">05 — Contact</span>
-        <h2>Let's build something with data</h2>
-        <p class="contact-sub">
-          I'm open to internships and entry-level roles in Data Engineering, Big Data and
-          AI/ML — on-site in Tunisia, remote, or with EU relocation.
-        </p>
-
-        <div class="contact-actions">
-          <a href="mailto:mohamedazizmadhbouh0@gmail.com" class="btn btn-primary">Email me</a>
-          <a href="https://github.com/AzizMadhbouh" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-          <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener" class="btn btn-ghost js-linkedin">LinkedIn</a>
-        </div>
-
-        <ul class="contact-facts">
-          <li>📍 Tunisia</li>
-          <li>✉️ <a href="mailto:mohamedazizmadhbouh0@gmail.com">mohamedazizmadhbouh0@gmail.com</a></li>
-          <li>💼 Open to relocation</li>
-        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Mohamed Aziz Madhbouh</span>
-      <span class="footer-note">Built from scratch with HTML, CSS &amp; JavaScript.</span>
+  <footer class="colophon">
+    <div class="wrap colophon-grid">
+      <p>
+        Set in Bricolage Grotesque, Newsreader &amp; JetBrains Mono. Hand-written HTML, CSS
+        and a little JavaScript — no template, no page builder.
+      </p>
+      <p>
+        © 2026 Mohamed Aziz Madhbouh<br />
+        Rev. 01 — Oct 2026
+      </p>
     </div>
   </footer>
 
