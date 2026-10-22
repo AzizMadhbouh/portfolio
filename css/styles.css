@@ -467,42 +467,6 @@ button { font: inherit; }
   max-width: 54ch;
 }
 
-/* ---------- Pipeline manifest ---------- */
-.manifest { border-top: 1px solid var(--ink); padding: 16px 0 18px; }
-.manifest-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 12px;
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.manifest-head .fig { color: var(--red-deep); }
-.manifest-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.manifest-grid > div {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 0 16px;
-  border-left: 1px solid var(--line);
-}
-.manifest-grid > div:first-child { padding-left: 0; border-left: 0; }
-.manifest-grid .k {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.manifest-grid .v {
-  font-family: var(--mono);
-  font-size: 10.5px;
-  letter-spacing: 0.01em;
-  color: var(--ink-2);
-}
 /* ---------- Ticker ---------- */
 .tape {
   border-block: 1px solid var(--ink);
@@ -898,9 +862,6 @@ button { font: inherit; }
   .hero { padding-top: calc(var(--bar) + 36px); }
   .name { font-size: clamp(48px, 12.6vw, 110px); letter-spacing: -0.05em; }
   .name .serif { font-size: 0.96em; }
-  .manifest-grid { grid-template-columns: 1fr 1fr; row-gap: 14px; }
-  .manifest-grid > div { padding: 0 0 0 12px; }
-  .manifest-grid > div:nth-child(odd) { padding-left: 0; border-left: 0; }
   .stage { padding: 70px 0; }
   .stage-head { grid-template-columns: 36px minmax(0, 1fr) auto; }
   .work-row {
