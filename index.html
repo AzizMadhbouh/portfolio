@@ -26,7 +26,7 @@
     <div class="wrap topbar-inner">
       <a class="mark" href="#top" aria-label="Mohamed Aziz Madhbouh — back to top">
         <span class="mark-box">MAM</span>
-        <span class="mark-meta">Portfolio / Rev. 01</span>
+        <span class="mark-meta">Portfolio / Rev. 02</span>
       </a>
       <div class="topbar-right">
         <span class="status"><i aria-hidden="true"></i> Open to work</span>
@@ -123,8 +123,8 @@
     <!-- ===== Ticker ===== -->
     <div class="tape" aria-hidden="true">
       <div class="tape-track">
-        <span>Python</span><b>✳</b><span>Spark</span><b>✳</b><span>Hadoop</span><b>✳</b><span>SQL</span><b>✳</b><span>PyTorch</span><b>✳</b><span>Docker</span><b>✳</b><span>PostgreSQL</span><b>✳</b><span>Grafana</span><b>✳</b><span>MapReduce</span><b>✳</b><span>pytest</span><b>✳</b>
-        <span>Python</span><b>✳</b><span>Spark</span><b>✳</b><span>Hadoop</span><b>✳</b><span>SQL</span><b>✳</b><span>PyTorch</span><b>✳</b><span>Docker</span><b>✳</b><span>PostgreSQL</span><b>✳</b><span>Grafana</span><b>✳</b><span>MapReduce</span><b>✳</b><span>pytest</span><b>✳</b>
+        <span>Python</span><b>✳</b><span>Spark</span><b>✳</b><span>Hadoop</span><b>✳</b><span>SQL</span><b>✳</b><span>PyTorch</span><b>✳</b><span>Docker</span><b>✳</b><span>PostgreSQL</span><b>✳</b><span>Grafana</span><b>✳</b><span>MapReduce</span><b>✳</b><span>Dagster</span><b>✳</b><span>Power BI</span><b>✳</b><span>pytest</span><b>✳</b>
+        <span>Python</span><b>✳</b><span>Spark</span><b>✳</b><span>Hadoop</span><b>✳</b><span>SQL</span><b>✳</b><span>PyTorch</span><b>✳</b><span>Docker</span><b>✳</b><span>PostgreSQL</span><b>✳</b><span>Grafana</span><b>✳</b><span>MapReduce</span><b>✳</b><span>Dagster</span><b>✳</b><span>Power BI</span><b>✳</b><span>pytest</span><b>✳</b>
       </div>
     </div>
 
@@ -145,7 +145,7 @@
             <p>
               I'm in my final year of a Big Data &amp; Data Analysis degree at ISAMM. My
               projects usually start with a file nobody wants to open: 4.1 million purchase
-              rows, 110,000 appointment records, a pile of Jenkins logs.
+              rows, 110,000 appointment records, 25 scanned invoices, a pile of Jenkins logs.
             </p>
             <p>
               The interesting part is what comes after. That means distributed processing on
@@ -194,16 +194,16 @@
             <span class="spec-val">Spark / PySpark · Hadoop HDFS · YARN · MapReduce · Hadoop Streaming</span>
           </div>
           <div class="spec-row">
-            <span class="spec-key">Storage</span>
-            <span class="spec-val">PostgreSQL · Pandas · NumPy · Git LFS</span>
+            <span class="spec-key">Storage / BI</span>
+            <span class="spec-val">PostgreSQL · SQLite · Pandas · NumPy · Power BI (DAX) · Git LFS</span>
           </div>
           <div class="spec-row">
             <span class="spec-key">ML / AI</span>
-            <span class="spec-val">scikit-learn · PyTorch · Hugging Face Transformers · ModernBERT · model evaluation</span>
+            <span class="spec-val">scikit-learn · PyTorch · Hugging Face Transformers · ModernBERT · Tesseract OCR · Ollama · LangChain · Pydantic · model evaluation</span>
           </div>
           <div class="spec-row">
             <span class="spec-key">Tooling</span>
-            <span class="spec-val">Docker · Docker Compose · Git · GitHub · Grafana · pytest · Jenkins · Linux</span>
+            <span class="spec-val">Docker · Docker Compose · Dagster · Git · GitHub · Grafana · pytest · Jenkins · Linux</span>
           </div>
         </div>
         <p class="spec-note reveal">// No percentage bars. These are tools I've used to ship something real.</p>
@@ -217,14 +217,28 @@
           <span class="folio">03</span>
           <div>
             <span class="tag">Output / Selected work</span>
-            <h2>Four systems,<br /><em>measured.</em></h2>
+            <h2>Five systems,<br /><em>measured.</em></h2>
           </div>
-          <span class="work-count">(04)</span>
+          <span class="work-count">(05)</span>
         </div>
 
         <div class="work-list">
-          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/ci-logs-classifier" target="_blank" rel="noopener">
+          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/ledgerlens" target="_blank" rel="noopener">
             <span class="work-idx">01</span>
+            <div class="work-main">
+              <h3>LedgerLens</h3>
+              <p>Local-first invoice pipeline: Tesseract OCR and a local Ollama model pull fields out of PDFs, deterministic rules validate them, and Dagster, SQLite and Power BI carry the result to a spend dashboard.</p>
+              <div class="work-stats">
+                <span><b>84%</b>straight-through</span>
+                <span><b>105/105</b>fields exact</span>
+                <span><b>8.9s</b>cached run</span>
+              </div>
+            </div>
+            <span class="work-go" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="work-row reveal" href="https://github.com/AzizMadhbouh/ci-logs-classifier" target="_blank" rel="noopener">
+            <span class="work-idx">02</span>
             <div class="work-main">
               <h3>CI Logs Classifier</h3>
               <p>Jenkins build ingestion, failure classification with a fine-tuned ModernBERT model, severity scoring, PostgreSQL storage and Grafana dashboards.</p>
@@ -238,7 +252,7 @@
           </a>
 
           <a class="work-row reveal" href="https://github.com/AzizMadhbouh/ev-analytics-spark-hadoop" target="_blank" rel="noopener">
-            <span class="work-idx">02</span>
+            <span class="work-idx">03</span>
             <div class="work-main">
               <h3>EV Analytics</h3>
               <p>Distributed analytics over 279,781 electric-vehicle registrations on a Dockerized HDFS + YARN + Spark cluster. Seven aggregations, computed in parallel.</p>
@@ -252,7 +266,7 @@
           </a>
 
           <a class="work-row reveal" href="https://github.com/AzizMadhbouh/mapreduce-purchases-analytics" target="_blank" rel="noopener">
-            <span class="work-idx">03</span>
+            <span class="work-idx">04</span>
             <div class="work-main">
               <h3>Purchases, Mapped &amp; Reduced</h3>
               <p>Hadoop Streaming job that totals sales and transaction counts per product category across 4.14 million retail records.</p>
@@ -266,7 +280,7 @@
           </a>
 
           <a class="work-row reveal" href="https://github.com/AzizMadhbouh/NoShowAnalysis" target="_blank" rel="noopener">
-            <span class="work-idx">04</span>
+            <span class="work-idx">05</span>
             <div class="work-main">
               <h3>No-Show Prediction</h3>
               <p>Logistic regression against a class-balanced random forest for predicting missed medical appointments. Honest metrics for an imbalanced dataset.</p>
@@ -345,7 +359,7 @@
       </p>
       <p>
         © 2026 Mohamed Aziz Madhbouh<br />
-        Rev. 01 — Oct 2026
+        Rev. 02 — Nov 2026
       </p>
     </div>
   </footer>
